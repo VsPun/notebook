@@ -1,12 +1,13 @@
 package com.phyton.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
 import java.util.stream.Stream;
 
-@Controller
+@RestController
 public class NoteBookServerController {
 
 	/**
@@ -19,7 +20,6 @@ public class NoteBookServerController {
 	@GetMapping("/execute")
 	public String executing(@RequestBody Stream<String> text,
 			Model model) {
-		//model.addAttribute("name", text);
 
 		/*
 		 text
