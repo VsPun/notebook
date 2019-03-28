@@ -22,7 +22,7 @@ public class PytonExecutor {
 		PyObject x = null;
 		try {
 			PythonInterpreter interp = new PythonInterpreter();
-			System.out.println("****** PYthon code process Started *******");
+			System.out.println("****** Python code process Started *******");
 			if (code.contains("print")) {
 				// remove print
 				String executedCode = StringUtils.replace(code, "print", " ");
@@ -38,7 +38,7 @@ public class PytonExecutor {
 
 				}
 
-				System.out.println("****** PYthon code ended  *****************");
+				System.out.println("****** Python code ended  *****************");
 				interp.close();
 			} else if (code.contains("=")) {
 				setVariable(code);

@@ -26,4 +26,22 @@ public class NotebookApplicationTests {
 	}
 
 	
+	@Test
+	public void testPytonExecutorVariableInitialisation() throws IOException {
+		PytonExecutor python =new PytonExecutor();
+		String res=python.execute("a = 1");
+		assertEquals("", res);
+		
+	}
+	
+	
+	@Test
+	public void testPytonExecutorWirhVariable() throws IOException {
+		PytonExecutor python =new PytonExecutor();
+		python.setVariable("20");
+		String res=python.execute("print a+51");
+		assertEquals("71", res);
+		
+	}
+	
 }
