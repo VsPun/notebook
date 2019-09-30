@@ -18,28 +18,28 @@ public class NotebookApplicationTests {
 	}
 	
 	@Test
-	public void testPytonExecutor() throws IOException {
-		PytonExecutor python =new PytonExecutor();
-		String res=python.execute("print 1+1");
+	public void testPhytonExecutor() throws IOException {
+		PhytonExecutor phython =new PhytonExecutor();
+		String res=phython.execute("print 1+1");
 		assertEquals("2", res);
 		
 	}
 
 	
 	@Test
-	public void testPytonExecutorVariableInitialisation() throws IOException {
-		PytonExecutor python =new PytonExecutor();
-		String res=python.execute("a = 1");
+	public void testPhytonExecutorVariableInitialisation() throws IOException {
+		PhytonExecutor phython =new PhytonExecutor();
+		String res=phython.execute("a = 1");
 		assertEquals("", res);
 		
 	}
 	
 	
 	@Test
-	public void testPytonExecutorWirhVariable() throws IOException {
-		PytonExecutor python =new PytonExecutor();
-		python.setVariable("20");
-		String res=python.execute("print a+51");
+	public void testPhytonExecutorWirhVariable() throws IOException {
+		PhytonExecutor phython =new PhytonExecutor();
+		phython.setVariable("20");
+		String res=phython.execute("print a+51");
 		assertEquals("71", res);
 		
 	}
